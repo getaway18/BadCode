@@ -1,0 +1,6 @@
+$stmt = $dbh->prepare("INSERT INTO Customers (CustomerName,Address,City)
+VALUES (:nam, :add, :cit)");
+$stmt->bindParam(':nam', $txtNam);
+$stmt->bindParam(':add', $txtAdd);
+$stmt->bindParam(':cit', $txtCit);
+$stmt->execute();
